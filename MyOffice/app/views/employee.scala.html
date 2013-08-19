@@ -1,0 +1,31 @@
+@(employees: List[Employee], employeeForm: Form[String])
+
+@import helper._
+
+@main("My Office") {
+    
+    <h1>Presently @employees.size employee(s)</h1>
+    
+    <ul>
+        @employees.map { employee =>
+            <li>
+                @employee.name
+                
+                @form(routes.MyOfficeController.deleteEmployee(employee.id)) {
+                    <input type="submit" value="Remove Employee">
+                }
+            </li>
+        }
+    </ul>
+    
+    <h2>Add a new Employee</h2>
+    
+    @form(routes.MyOfficeController.newEmployee) {
+        
+        @inputText(employeeForm("name")) 
+        
+        <input type="submit" value="Add Employee">
+        
+    }
+    
+}
