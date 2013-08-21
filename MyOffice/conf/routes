@@ -13,4 +13,12 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 GET     /employees                       controllers.MyOfficeController.employees
 POST    /newEmployee                     controllers.MyOfficeController.newEmployee
 POST   /employee/:id/deleteEmployee      controllers.MyOfficeController.deleteEmployee(id: Long)                     
-                                                     
+         
+#Calling Web Services
+GET /jobs                                controllers.Application.jobs 
+
+#XML Demo
+POST  /sayHello                           controllers.Application.sayHello
+
+#JSON Demo            
+POST  /greet                              controllers.Application.greet                               
