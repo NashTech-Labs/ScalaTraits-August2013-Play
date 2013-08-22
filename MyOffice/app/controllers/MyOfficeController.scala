@@ -16,14 +16,16 @@ object MyOfficeController extends Controller {
   /**
    * Total Employees In Office
    */
-  def employees = Action {
+  def employees = TODO
+  /*def employees = Action {
     Ok(views.html.employee(Employee.allEmployees(), employeeForm))
-  }
+  }*/
 
   /**
    * Add A New Employee
    */
-  def newEmployee = Action { implicit request =>
+  def newEmployee = TODO
+  /* def newEmployee = Action { implicit request =>
     employeeForm.bindFromRequest.fold(
       errors => BadRequest(views.html.employee(Employee.allEmployees(),
         employeeForm)),
@@ -31,13 +33,14 @@ object MyOfficeController extends Controller {
         Employee.newEmployee(name)
         Redirect(routes.MyOfficeController.employees)
       })
-  }
+  }*/
   /**
    * Remove An Employee
    */
-  def deleteEmployee(id: Long) = Action {
+  def deleteEmployee = TODO
+  /* def deleteEmployee(id: Long) = Action {
     Employee.delete(id)
     Redirect(routes.MyOfficeController.employees)
-  }
+  }*/
 
 }

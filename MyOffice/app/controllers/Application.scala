@@ -14,17 +14,19 @@ object Application extends Controller {
    * Calling web services
    */
 
-  def jobs = Action {
+  def jobs = TODO
+  /*def jobs = Action {
     WS.url("http://www.scalajobz.com/getAllJobs").get().map {
       response => println(response.json)
     }
     Ok("Jobs Fetched")
-  }
+  }*/
 
   /**
    * XML Demo
    */
-  def sayHello = Action { request =>
+  def sayHello = TODO
+  /* def sayHello = Action { request =>
     request.body.asXml.map { xml =>
       (xml \\ "name" headOption).map(_.text).map { name =>
         Ok("Hello " + name + "   ")
@@ -34,12 +36,13 @@ object Application extends Controller {
     }.getOrElse {
       BadRequest("Expecting Xml data")
     }
-  }
+  }*/
 
   /**
    * Json Demo
    */
-  def greet = Action { request =>
+  def greet = TODO
+  /*def greet = Action { request =>
     request.body.asJson.map { json =>
       (json \ "name").asOpt[String].map { name =>
         Ok("Hello " + name + " ")
@@ -49,5 +52,5 @@ object Application extends Controller {
     }.getOrElse {
       BadRequest("Expecting Json data")
     }
-  }
+  }*/
 }
