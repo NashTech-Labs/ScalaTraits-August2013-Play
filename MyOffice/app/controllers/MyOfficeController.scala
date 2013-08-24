@@ -37,7 +37,7 @@ object MyOfficeController extends Controller {
   /**
    * Remove An Employee
    */
-  def deleteEmployee = TODO
+  def deleteEmployee(id: Long)  = TODO
   /* def deleteEmployee(id: Long) = Action {
     Employee.delete(id)
     Redirect(routes.MyOfficeController.employees)
